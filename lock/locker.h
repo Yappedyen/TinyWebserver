@@ -127,6 +127,7 @@ public:
         //pthread_mutex_unlock(&m_mutex);
         return ret == 0;
     }
+    // 超时等待条件变量
     bool timewait(pthread_mutex_t *m_mutex, struct timespec t)
     {
         int ret = 0;

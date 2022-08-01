@@ -82,6 +82,7 @@ bool threadpool<T>::append(T *request, int state)
     m_queuestat.post();
     return true;
 }
+
 template <typename T>
 bool threadpool<T>::append_p(T *request)
 {
