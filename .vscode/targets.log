@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug  1 11:52:37 2022
+# Make data base, printed on Tue Aug  2 14:35:50 2022
 
 # Variables
 
@@ -59,7 +59,7 @@ LIBRARY_PATH = :/usr/local/protobuf/lib/:/usr/local/lib/
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-954c497d-e34c-45d5-97bb-83ea6f36fb91.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-918f1234-63d8-4b44-9e6b-9f40c541b1b7.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -265,6 +265,6 @@ webserver.cpp:
 # strcache performance: lookups = 42 / hit rate = 23%
 # hash-table stats:
 # Load=32/8192=0%, Rehash=0, Collisions=1/42=2%
-# Finished Make data base on Mon Aug  1 11:52:37 2022
+# Finished Make data base on Tue Aug  2 14:35:50 2022
 
  
