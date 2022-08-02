@@ -13,12 +13,25 @@ using namespace std;
 class Log
 {
 public:
-    //C++11以后,使用局部变量懒汉不用加锁
+    // 之前的单例懒汉模式是有线程安全问题的，需要做双重检查+互斥锁
+    //C++11以后,使用静态局部变量懒汉模式不用加锁就是线程安全的
+    // 只适合c++11以上标准
+    // 首先，静态局部变量通过静态方法获得，且只有当该静态方法第一次执行
+    // 的时候才会初始化，且后续再次调用该方法也不会再次初始化，
+    // 这是静态局部变量的特性。
+    // 而在c++11以上标准中，静态局部变量初始化是线程安全的。
+    // 当其中一个线程初始化instance的时候，会阻塞其它线程的初始化行为。
+
     static Log *get_instance()
     {
         static Log instance;
         return &instance;
     }
+    // delete拷贝构造和赋值函数，防止拷贝赋值
+    Log(const Log&) = delete;
+    Log& operator=(const Log&) = delete;
+    Log(Log &&) = delete;
+    Log & operator=(const Log&&) = delete;
 
     static void *flush_log_thread(void *args)
     {
